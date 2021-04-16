@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
 
 
 if(proces.env.NODE_ENV === 'production' ){
-  app.use(express.static("frontend/build"));
+  app.use(express.static("client/build"));
 }
 
 app.listen(process.env.PORT || 5000,function(err){
