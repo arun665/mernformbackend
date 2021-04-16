@@ -2,7 +2,8 @@ var express=require("express");
 
 var formDataApi=require("./api/formdata.js");
 
-const app = express()
+const app = express();
+const path = require('path');
 
 
 
@@ -27,9 +28,12 @@ app.get('/', function (req, res) {
 })
 
 
-
-if(proces.env.NODE_ENV === 'production' ){
+if(process.env.NODE_ENV=== 'production'){
   app.use(express.static("client/build"));
+  app.get('*',(req,res)=>{
+res.sendFile(path.resolve(__dirname,'client','build','index.html'));
+  }
+  );
 }
 
 app.listen(process.env.PORT || 5000,function(err){
