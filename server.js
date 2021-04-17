@@ -36,6 +36,6 @@ res.sendFile(path.resolve(__dirname,'client','build','index.html'));
   );
 }
 
-app.listen(8000,function(err){
-    console.log("running on port 8000");
+app.listen(process.env.PORT || 5000,function(err){
+    console.log("running on port 5000");
 });
