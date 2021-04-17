@@ -6,12 +6,8 @@
   "scripts": {
  
     "start": "node server.js",
-    "server": "node server.js",
-    "client":"cd client && npm start",
-    "install-client":"cd client && npm install",
-    "build":"cd client && npm run build",
-    "heroku-postbuild": "npm run install-client && npm run build",
-    "dev": "concurrently \"npm run server\" \" npm run client \""
+    "server": "node server.js"
+ 
   },
   "author": "arun sharma",
   "license": "ISC",
